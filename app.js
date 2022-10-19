@@ -9,7 +9,8 @@ const numbers = /[0-9]/g;
 
 // class 'error' a los input
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value === '') {
             errorMessage[i].innerHTML = 'This field can\'t be blank';
